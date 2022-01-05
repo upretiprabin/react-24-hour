@@ -11,6 +11,7 @@
   &__icons {
     @include flex-JB;
     gap: 15px;
+    color: $link-color;
   }
 
   &__tag{
@@ -87,5 +88,4 @@
     position: relative;
     bottom: 3px;
   }
-
 }

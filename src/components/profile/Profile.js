@@ -4,13 +4,13 @@ import {faEdit, faFileInvoice} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collectibles} from "../collectibles/Collectibles";
 import {Actions} from "../actions/Actions";
+import {Experiences} from "../experiences/Experiences";
 import ProfileIcon from "./profileIcon/ProfileIcon";
 import { ROUTE_ACTIONS, ROUTE_COLLECTIBLES, ROUTE_CONNECTED_EXPERIENCES } from "./constant";
 import { ROUTE_ALL } from "../transaction/constant";
 
 const Profile = ({data}) =>{
     const hash = useLocation().hash;
-    
     return (
         <div className='profile'>
             <div className='profile__header'>
@@ -37,25 +37,9 @@ const Profile = ({data}) =>{
                     </li>
                 </ul>
                 <div className='profile__tab-content'>
-                    {ROUTE_COLLECTIBLES === hash || '' === hash ?
-                        (
-                            <Collectibles id="collectibles" {...data}/>
-                        ) : null
-                    }
-
-                    {ROUTE_ACTIONS === hash ?
-                        (
-                            <Actions id="actions" />
-                        ) : null
-                    }
-
-                    {ROUTE_CONNECTED_EXPERIENCES === hash ?
-                        (
-                            <div id="connectedExperiences" className="tab-content">
-                                {JSON.stringify(data.connectionExperiences)}
-                            </div>
-                        ) : null
-                    }
+                    {ROUTE_COLLECTIBLES === hash || '' === hash ? (<Collectibles id="collectibles" {...data}/>) : null}
+                    {ROUTE_ACTIONS === hash ? (<Actions id="actions" />) : null}
+                    {ROUTE_CONNECTED_EXPERIENCES === hash ? (<Experiences {...data}/>) : null}
                 </div>
             </div>
         </div>
