@@ -1,17 +1,17 @@
 /**
- * App starts from here
+ * App routes are loaded here
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect, Route } from 'react-router-dom';
-
+import routerService from "../services/_routerService";
+import AppLayout from "../appLayout"
+import {Redirect, Route, withRouter} from "react-router-dom";
 
 class MainApp extends Component {
 
     _isMounted = false;
 
     state = {};
-
 
     static getDerivedStateFromProps(props,state){
         return {...state}
@@ -29,20 +29,18 @@ class MainApp extends Component {
     }
 
     render() {
-        const {firstName,lastName} = this.props;
-
+        const { match, location } = this.props;
+        let routes = routerService;
+        if(location.pathname === "/")
+            return (<Redirect to={'/first-page'} />);
         return (
-            <div>
-                Hello {firstName} {lastName},
-            </div>
+            <AppLayout>
+                {routes && routes.map((route,key)=>
+                    <Route key={key} path={`/${route.path}`} component={route.component} />
+                )}
+            </AppLayout>
         );
     }
 }
 
-// map state to props
-const mapStateToProps = ({ authUser }) => {
-    const { firstName, lastName } = authUser;
-    return { firstName, lastName };
-};
-
-export default connect(mapStateToProps)(MainApp);
+export default withRouter(MainApp);

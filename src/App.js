@@ -1,9 +1,14 @@
+/**
+ * Redux store to app is passed from here
+ * */
+
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MomentUtils from '@date-io/moment';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import MainApp from './container/App';
 import store from './store';
+import './App.css';
 
 const App = () => (
     <Provider store={store}>
