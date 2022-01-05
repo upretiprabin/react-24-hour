@@ -4,18 +4,22 @@
 
 export const popularCategoriesData = [
     {
+        "id":1,
         "title": "Exchanges",
         "image": ""
     },
     {
+        "id":2,
         "title": "Games",
         "image": ""
     },
     {
+        "id":3,
         "title": "Marketplaces",
         "image": ""
     },
     {
+        "id":4,
         "title": "Defi",
         "image": ""
     }
