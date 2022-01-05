@@ -5,5 +5,5 @@ import {
 
 export const setFilter = (filterData) => ({
     type: SET_FILTER,
-    action : {filterList:filterData}
+    payload : {filterList:filterData}
 });
