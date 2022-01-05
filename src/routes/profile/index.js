@@ -2,15 +2,15 @@
  * App starts from here
  */
 import React, { Component } from 'react';
-import Hello from "../../components/FirstPage/Hello";
-import {loadHelloComponentData} from "../../services/firstPage/firstPageService";
+import Profile from "../../components/profile/Profile";
+import {loadProfileData} from "../../services/profile/ProfileService";
 
-class FirstPage extends Component {
+class ProfileComponent extends Component {
 
     _isMounted = false;
 
     state = {
-        helloComponentData : null
+        profileData : null
     };
 
     static getDerivedStateFromProps(props,state){
@@ -23,7 +23,7 @@ class FirstPage extends Component {
     }
 
     loadData(){
-        loadHelloComponentData(this);
+        loadProfileData(this);
     }
 
     componentDidMount(){
@@ -39,13 +39,13 @@ class FirstPage extends Component {
     }
 
     render() {
-        const {helloComponentData} = this.state;
+        const {profileData} = this.state;
         return (
-            <Hello
-                dummyData={helloComponentData}
-            />
+            <>
+                { profileData ? <Profile data={profileData} /> : null }
+            </>
         );
     }
 }
 
-export default FirstPage;
+export default ProfileComponent;

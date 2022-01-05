@@ -32,7 +32,7 @@ class MainApp extends Component {
         const { match, location } = this.props;
         let routes = routerService;
         if(location.pathname === "/")
-            return (<Redirect to={'/first-page'} />);
+            return (<Redirect to={'/profile#Collectibles'} />);
         return (
             <AppLayout>
                 {routes && routes.map((route,key)=>

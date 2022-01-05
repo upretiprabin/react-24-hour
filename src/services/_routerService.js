@@ -2,13 +2,13 @@
  * This service serves as a router path collection
  * */
 
-import FirstPage from "../routes/first-page";
+import ProfileComponent from "../routes/profile";
 import {CreateContact} from "../components/createContact/CreateContact";
 
 export default [
     {
-        path: 'first-page',
-        component: FirstPage
+        path: 'profile',
+        component: ProfileComponent
     },
     {
         path: 'createContact',
