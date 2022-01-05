@@ -1,7 +1,6 @@
 import React from "react";
-import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useLocation} from "react-router-dom";
+import DetailTabs from "./DetailTabs";
 
 const ExperienceDetail = ({experienceData}) =>{
     console.log("experienceData",experienceData)
@@ -18,7 +17,7 @@ const ExperienceDetail = ({experienceData}) =>{
         <div className='experience-detail'>
             {experienceDetailData &&
                 <div>
-                    <p className={""}>{experienceDetailData.title}</p>
+                    <DetailTabs detailData={experienceDetailData}/>
                 </div>
             }
         </div>

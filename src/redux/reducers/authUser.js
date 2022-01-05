@@ -10,8 +10,8 @@ import {
  * initial app settings
  */
 const INIT_STATE = {
-    firstName : 'Prabin',
-    lastName : 'Upreti',
+    firstName : 'John',
+    lastName : 'Doe',
     username: 'JohnDoe.near',
     relatedAccounts: [
         {username: 'JohnDoe.near', near: '0.34'},

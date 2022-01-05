@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import {ROUTE_EXPERIENCE_DETAIL} from "../experienceDetail/constant";
 
 const RecentExperience = ({recentData}) =>{
-    console.log("recentdata",recentData)
     return (
         <div className='recent-experience'>
             <div>

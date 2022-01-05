@@ -1,7 +1,6 @@
 import React from "react";
 
 const PopularCategories = ({popularData}) =>{
-    console.log("popular",popularData)
 
     return (
         <div className='popular-categories'>

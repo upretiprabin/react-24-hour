@@ -14,16 +14,19 @@ export const experienceDetailData = [
         "activities":[
             {
                 "userName" : "johndoe.near",
+                "image":"",
                 "description" : "johndoe.near signed the contract successfully",
                 "date" : "2 days ago"
             },
             {
                 "userName" : "CryptoKing.near",
+                "image":"",
                 "description" : "CryptoKing.near requested to sign the contract",
                 "date" : "3 days ago"
             },
             {
                 "userName" : "maxwell.near",
+                "image":"",
                 "description" : "maxwell.near requested to sign the contract",
                 "date" : "3 days ago"
             }
@@ -40,16 +43,19 @@ export const experienceDetailData = [
         "activities":[
             {
                 "userName" : "johndoe.near",
+                "image":"",
                 "description" : "johndoe.near signed the contract successfully",
                 "date" : "2 days ago"
             },
             {
                 "userName" : "CryptoKing.near",
+                "image":"",
                 "description" : "CryptoKing.near requested to sign the contract",
                 "date" : "3 days ago"
             },
             {
                 "userName" : "maxwell.near",
+                "image":"",
                 "description" : "maxwell.near requested to sign the contract",
                 "date" : "3 days ago"
             }
