@@ -14,13 +14,18 @@ const PopularCategories = ({popularData}) =>{
                 {popularData && popularData.map((data,index)=>{
                     return(
                         <div key={index} className='tile'>
-                            <div className='tile__image'>
-                                <img src={data.image} alt={data.title} height="80" width="80" className="img-fluid" />
-                            </div>
-                            <div className='tile__footer'>
-                                <p className='tile__title'>{data.title}</p>
-                                <FontAwesomeIcon className='collectible__icon' icon={faAngleRight} />
-                            </div>
+                            {
+                                data.show &&
+                                <div>
+                                    <div className='tile__image'>
+                                        <img src={data.image} alt={data.title} height="80" width="80" className="img-fluid" />
+                                    </div>
+                                    <div className='tile__footer'>
+                                        <p className='tile__title'>{data.title}</p>
+                                        <FontAwesomeIcon className='collectible__icon' icon={faAngleRight} />
+                                    </div>
+                                </div>
+                            }
                         </div>
                     );
                 })}

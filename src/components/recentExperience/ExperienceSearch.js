@@ -2,6 +2,7 @@ import React from "react";
 import {faFilter, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { Input } from 'reactstrap';
+import FilterModal from "../filter/filterModal";
 
 const ExperienceSearch = ({handleSearch,searchString}) =>{
 
@@ -19,7 +20,7 @@ const ExperienceSearch = ({handleSearch,searchString}) =>{
                     value={searchString}
                 />
             </div>
-            <FontAwesomeIcon icon={faFilter} />
+            <FilterModal/>
         </div>
     );
 }

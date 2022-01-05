@@ -1,14 +1,11 @@
 /**
- * App Settings Reducers
- */
-
+ * reducer for app user
+ *
+ * */
 import {
     SET_FLAG
 } from '../actions/types';
 
-/**
- * initial app settings
- */
 const INIT_STATE = {
     firstName : 'John',
     lastName : 'Doe',

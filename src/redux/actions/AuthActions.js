@@ -1,5 +1,5 @@
 /**
- * Redux App Settings Actions
+ * Redux Auth User Actions
  */
 import {
     SET_FLAG

@@ -6,21 +6,37 @@ export const popularCategoriesData = [
     {
         "id":1,
         "title": "Exchanges",
-        "image": ""
+        "image": "",
+        "show" : true
     },
     {
         "id":2,
         "title": "Games",
-        "image": ""
+        "image": "",
+        "show" : true
     },
     {
         "id":3,
         "title": "Marketplaces",
-        "image": ""
+        "image": "",
+        "show" : true
     },
     {
         "id":4,
         "title": "Defi",
-        "image": ""
+        "image": "",
+        "show" : true
+    },
+    {
+        "id":5,
+        "title": "Collectibles",
+        "image": "",
+        "show" : true
+    },
+    {
+        "id":6,
+        "title": "Utilities",
+        "image": "",
+        "show" : true
     }
 ]
