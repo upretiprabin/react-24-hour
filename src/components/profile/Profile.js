@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import {faEdit, faFileInvoice} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collectibles} from "../collectibles/Collectibles";
+import {Actions} from "../actions/Actions";
 
 const Profile = ({data}) =>{
     const hash = useLocation().hash;
@@ -44,10 +45,7 @@ const Profile = ({data}) =>{
 
                     {"#actions" === hash ?
                         (
-                            <div id="actions" className="tab-content">
-                                <button>Send</button>
-                                <button>Receive</button>
-                            </div>
+                            <Actions id="actions" />
                         ) : null
                     }
 
