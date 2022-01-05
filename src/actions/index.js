@@ -1,4 +1,4 @@
 /**
  * Redux Actions 
  */
-export * from './SettingsActions';
+export * from './AuthActions';

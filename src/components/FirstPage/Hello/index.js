@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import {connect} from "react-redux";
 
 const Hello = ({dummyData,firstName,lastName}) =>{
-    console.log("dummyData",dummyData)
     return (
         <div>
             Hello {firstName} {lastName},
