@@ -22,24 +22,24 @@ const Transactions = ({data}) => {
                 tempTransaction = transactions;
         }
         return tempTransaction;
-    }
+    };
 
     return (
         <>
-            <div>
+            <div className='page-title page-title--space-between'>
                 <h3>Transactions</h3>
-                <ProfileIcon name={authUser.firstName + ' ' + authUser.lastName} size={'md'}/>
+                <ProfileIcon name={authUser.firstName + ' ' + authUser.lastName} size={'sm'}/>
             </div>
-            <div>
-                <Link to={ROUTE_ALL}> All </Link>|
-                <Link to={ROUTE_SENT}> Sent </Link>|
-                <Link to={ROUTE_RECEIVED}> Received </Link>
+            <div className='filter'>
+                <Link className='filter__option active' to={ROUTE_ALL}> All </Link>
+                <Link className='filter__option' to={ROUTE_SENT}> Sent </Link>
+                <Link className='filter__option' to={ROUTE_RECEIVED}> Received </Link>
             </div>
             <div>
                 <TransactionItems data={getTransactions(hash)} />
             </div>
         </>
     );
-}
+};
 
 export default Transactions;

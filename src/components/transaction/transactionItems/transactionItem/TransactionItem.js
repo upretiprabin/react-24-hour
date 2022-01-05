@@ -1,5 +1,7 @@
 import React from 'react';
 import { TXN_TYPE_RECEIVED } from '../../constant';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
 
 const TransactionItem = ({data}) => {
     const transaction = data || {};
@@ -11,20 +13,20 @@ const TransactionItem = ({data}) => {
     const days = Math.ceil(differenceDate / (1000 * 3600 * 24));
 
     return (
-        <>
-            <div>{TXN_TYPE_RECEIVED === transaction.type ? "Received Image" : "Sent Image"}</div>
-            <div>
+        <div className={TXN_TYPE_RECEIVED === transaction.type ? "transaction-item" : "transaction-item send"}>
+            <div className='tag'>
+                <FontAwesomeIcon className='icon' icon={faArrowDown} />
+            </div>
+            <div className='transaction-item__details'>
                 <p className="head">{transaction.near}</p>
                 <p className="tail">
                     <span>{TXN_TYPE_RECEIVED === transaction.type ? "Received from " : "Sent to "}</span>
-                    <span>{transaction.username}</span>
+                    <span className='username'>{transaction.username}</span>
                 </p>
             </div>
-            <div>
-                <p>{days + ' days ago'}</p>
-            </div>
-        </>
+            <p className='transaction-item__date'>{days + ' days ago'}</p>
+        </div>
     )
-}
+};
 
 export default TransactionItem;

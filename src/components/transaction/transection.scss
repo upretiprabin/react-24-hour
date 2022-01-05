@@ -1,0 +1,14 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  &__option {
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    &.active {
+      border: 1px solid $primary-gray;
+    }
+  }
+}

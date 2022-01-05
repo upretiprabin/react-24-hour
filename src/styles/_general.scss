@@ -1,0 +1,16 @@
+.page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid $primary-gray;
+  margin-bottom: 30px;
+
+  h3 {
+    font-size: 18px;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+}

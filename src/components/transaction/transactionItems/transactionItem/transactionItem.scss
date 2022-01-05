@@ -1,0 +1,51 @@
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 30px 0;
+
+  .tag {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-gray;
+    color: darken($primary-gray, 20);
+    border-radius: 100%;
+    .icon {
+      transform: rotate(45deg);
+    }
+  }
+  &.send {
+    .tag {
+      color: $link-color;
+      .icon {
+        transform: rotate(225deg);
+      }
+    }
+    .username {
+      color: $link-color;
+    }
+    .head {
+      color: $link-color;
+    }
+  }
+
+  &__details {
+    flex: 1;
+    p {
+      margin: 0;
+    }
+    .head {
+      color: darken($primary-gray, 20%);
+    }
+    .username {
+      color: darken($primary-gray, 20%);
+    }
+  }
+
+  &__date {
+    color: darken($primary-gray, 20%);
+  }
+}
