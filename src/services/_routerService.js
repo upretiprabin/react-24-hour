@@ -4,8 +4,9 @@
 
 import ProfileComponent from "../routes/profile";
 import DashboardComponent from "../routes/dashboard";
-import TransactionPage from "../routes/TransactionsPage";
+import TransactionsComponent from "../routes/TransactionsComponent";
 import ExperienceComponent from "../routes/experience";
+import EditContactComponent from "../routes/EditContactComponent";
 
 export default [
     {
@@ -22,6 +23,10 @@ export default [
     },
     {
         path: 'transactions',
-        component: TransactionPage
+        component: TransactionsComponent
+    },
+    {
+        path: 'edit-contact/:userId',
+        component: EditContactComponent
     }
 ]

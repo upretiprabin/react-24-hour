@@ -17,7 +17,7 @@ const Profile = ({data}) =>{
                 <ProfileIcon name={data.firstName + ' ' + data.lastName} size={'md'}/>
                 <div className='profile__icons'>
                     <Link to={'/transactions'+ROUTE_ALL}><FontAwesomeIcon icon={faFileInvoice} /></Link>
-                    <Link to={'#'}><FontAwesomeIcon icon={faEdit} /></Link>
+                    <Link to={'/edit-contact/'+ data.id}><FontAwesomeIcon icon={faEdit} /></Link>
                 </div>
             </div>
             <div className='profile__details'>

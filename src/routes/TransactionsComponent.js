@@ -5,7 +5,7 @@
 import Transactions from '../components/transaction/Transactions';
 import { loadTransactions } from '../services/transaction/TransactionService';
  
- class TransactionsPage extends Component {
+ class TransactionsComponent extends Component {
  
      _isMounted = false;
  
@@ -48,5 +48,5 @@ import { loadTransactions } from '../services/transaction/TransactionService';
      }
  }
  
- export default TransactionsPage;
+ export default TransactionsComponent;
  

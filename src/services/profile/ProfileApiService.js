@@ -3,8 +3,16 @@
  * sends dummy data as a resolved promise
  * */
 
-import {profile} from "../../components/profile/Data";
+import {Profile, Contacts} from "../../components/profile/Data";
 
 export const getProfileComponent = () =>{
-    return Promise.resolve(profile);
+    return Promise.resolve(Profile);
+}
+
+export const getContactDetailById = (userId) =>{
+    return Promise.resolve(Contacts.filter((contact) => contact.userId === userId));
+}
+
+export const saveContactDetail = (data) =>{
+    return Promise.resolve(data);
 }

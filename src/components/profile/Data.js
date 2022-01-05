@@ -2,7 +2,7 @@
  * dummy data for each component are placed in a separate file
  * */
 
-export const profile = {
+export const Profile = {
     "id": 1,
     "firstName": "Devon",
     "lastName": "Lane",
@@ -39,3 +39,14 @@ export const profile = {
         }
     ]
 }
+
+export const Contacts = [
+    {
+        "id": 1,
+        "userId": 1,
+        "fullName": "Devon Lane",
+        "email": "devonlane@gmail.com",
+        "phone": "222222222",
+        "nearAccountId": "0101"
+    }
+]
