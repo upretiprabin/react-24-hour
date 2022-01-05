@@ -6,7 +6,7 @@ export const Collectibles = (props) => {
     return (
         <div>
             <div className="profile__tab-heading">
-                <h4>Collectibles <span className="profile__tab-heading-count">3</span></h4>
+                <h4>Collectibles <span className="profile__tab-heading-count">{collectibles.length || 0}</span></h4>
             </div>
             <div className="collectibles">
                 {collectibles.map((collectible, index) => <IndividualCollectibles key={'collectibles'+index} {...collectible} />)}

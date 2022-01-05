@@ -14,32 +14,32 @@ const Profile = ({data}) =>{
     return (
         <div className='profile'>
             <div className='profile__header'>
-                <ProfileIcon name={data.name} size={'md'}/>
+                <ProfileIcon name={data.firstName + ' ' + data.lastName} size={'md'}/>
                 <div className='profile__icons'>
                     <Link to={'/transactions'+ROUTE_ALL}><FontAwesomeIcon icon={faFileInvoice} /></Link>
                     <Link to={'#'}><FontAwesomeIcon icon={faEdit} /></Link>
                 </div>
             </div>
             <div className='profile__details'>
-                <h3>{data.name || ""}</h3>
+                <h3>{(data.firstName + ' ' + data.lastName) || ""}</h3>
                 <p>{data.email || ""}</p>
             </div>
             <div className="profile__tab-wrapper">
                 <ul className="profile__tab-header">
-                    <li className='active'>
+                    <li className={ROUTE_COLLECTIBLES === hash || '' === hash ? "active": ""}>
                         <Link to={ROUTE_COLLECTIBLES}> Collectibles </Link>
                     </li>
-                    <li>
+                    <li className={ROUTE_ACTIONS === hash ? "active": ""}>
                         <Link to={ROUTE_ACTIONS}> Actions </Link>
                     </li>
-                    <li>
+                    <li className={ROUTE_CONNECTED_EXPERIENCES === hash ? "active": ""}>
                         <Link to={ROUTE_CONNECTED_EXPERIENCES}> Connected Experiences </Link>
                     </li>
                 </ul>
                 <div className='profile__tab-content'>
                     {ROUTE_COLLECTIBLES === hash || '' === hash ? (<Collectibles id="collectibles" {...data}/>) : null}
                     {ROUTE_ACTIONS === hash ? (<Actions id="actions" />) : null}
-                    {ROUTE_CONNECTED_EXPERIENCES === hash ? (<Experiences {...data}/>) : null}
+                    {ROUTE_CONNECTED_EXPERIENCES === hash ? (<Experiences id="experiences" {...data}/>) : null}
                 </div>
             </div>
         </div>

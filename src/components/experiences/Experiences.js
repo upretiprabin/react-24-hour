@@ -2,10 +2,10 @@ import React from "react";
 import {IndividualExperience} from "../individualExperience/individualExperience";
 
 export const Experiences = (props) => {
-    const {connectionExperiences} = props;
+    const {firstName, connectionExperiences} = props;
     return (
         <div>
-            <p>2 connected experiences with devon.</p>
+            <p>{connectionExperiences.length || 0} connected experiences with {firstName}.</p>
             <div className="collectibles">
                 {connectionExperiences.map((experience, index) => <IndividualExperience key={'experience'+index} {...experience} />)}
             </div>

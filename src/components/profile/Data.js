@@ -4,7 +4,8 @@
 
 export const profile = {
     "id": 1,
-    "name": "Devon Lane",
+    "firstName": "Devon",
+    "lastName": "Lane",
     "email": "devonlane@gmail.com",
     "collectibles": [
         {
