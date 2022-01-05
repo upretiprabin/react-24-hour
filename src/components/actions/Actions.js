@@ -6,11 +6,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 export const Actions = () => {
     return (
         <div className="action">
-            <button className='btn btn--primary mb-3'>
+            <button className='btn btn--primary mb-3 btn-block'>
                 Send
                 <FontAwesomeIcon className='action__icon' icon={faArrowUp} />
             </button>
-            <button className='btn btn--primary'>
+            <button className='btn btn--primary btn-block'>
                 Receive
                 <FontAwesomeIcon className='action__icon' icon={faArrowDown} />
             </button>
