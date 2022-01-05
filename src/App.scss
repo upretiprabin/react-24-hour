@@ -28,8 +28,10 @@
   color: #61dafb;
 }
 
-.app-wrapper{
-  text-align: center;
+.app-wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 @keyframes App-logo-spin {

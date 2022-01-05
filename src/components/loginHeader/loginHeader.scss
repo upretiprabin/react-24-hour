@@ -3,11 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #F5F5F5;
+  background-color: $header-background;
+  margin-bottom: 30px;
 
   &__icon-wrapper {
     display: flex;
     gap: 10px;
-    color: #BEBEC2;
+    color: $header-icon-color;
   }
 }

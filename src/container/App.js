@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import routerService from "../services/_routerService";
 import AppLayout from "../components/appLayout"
 import {Redirect, Route, withRouter} from "react-router-dom";
+import {LoginHeader} from "../components/loginHeader/LoginHeader";
 
 class MainApp extends Component {
 

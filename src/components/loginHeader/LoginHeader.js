@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLongArrowAltLeft, faHome, faBell, faCog} from '@fortawesome/free-solid-svg-icons';
 import {AccountDropdown} from "../accountDropdown/AccountDropdown";
-import './loginHeader.scss'
 
 export const LoginHeader = () => {
     return (<>

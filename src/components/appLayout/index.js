@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {LoginHeader} from "../loginHeader/LoginHeader";
 
 class AppLayout extends Component {
 
@@ -33,9 +34,12 @@ class AppLayout extends Component {
     render() {
         const { children } = this.props;
         return (
-            <div className={"app-wrapper"}>
-                { children }
-            </div>
+            <>
+                <LoginHeader/>
+                <div className="app-wrapper">
+                    { children }
+                </div>
+            </>
         );
     }
 }

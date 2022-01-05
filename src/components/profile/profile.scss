@@ -1,0 +1,90 @@
+@mixin flex-JB {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile {
+  &__header {
+    @include flex-JB;
+  }
+
+  &__icons {
+    @include flex-JB;
+    gap: 15px;
+  }
+
+  &__tag{
+    font-weight: 600;
+    font-size: 16px;
+    background-color: $profile-tag-bg;
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__details {
+    margin-top: 15px;
+    h3 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: $primary-header-color;
+    }
+    p {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: -0.154px;
+      color: $primary-text-color;
+    }
+  }
+
+  &__tab-header {
+    list-style: none;
+    @include flex-JB;
+    gap: 0;
+    padding: 0;
+    border-bottom: 1px solid $primary-gray;
+    li {
+      position: relative;
+      top: 1px;
+      flex: 1;
+      padding: 15px;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: $primary-text-color;
+        &:hover {
+          font-weight: 500;
+        }
+      }
+      &.active {
+        border-bottom: 3px solid $primary-text-color;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__tab-heading {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &__tab-heading-count {
+    font-size: 12px;
+    background-color: $primary-text-color;
+    color: $primary-white;
+    border-radius: 100%;
+    height: 18px;
+    width: 18px;
+    padding: 2px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    bottom: 3px;
+  }
+
+}
