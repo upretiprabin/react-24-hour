@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import routerService from "../services/_routerService";
-import AppLayout from "../appLayout"
+import AppLayout from "../components/appLayout"
 import {Redirect, Route, withRouter} from "react-router-dom";
 
 class MainApp extends Component {

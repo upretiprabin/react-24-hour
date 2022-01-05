@@ -8,7 +8,7 @@ import MomentUtils from '@date-io/moment';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainApp from './container/App';
-import store from './store';
+import store from './redux/store';
 import './App.scss';
 
 const App = () => (
