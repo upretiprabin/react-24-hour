@@ -52,9 +52,8 @@ class DashboardComponent extends Component {
         return (
             <>
                 <ExperienceSearch handleSearch={(searchString)=>{this.handleSearch(searchString)}}/>
-                <FilterModal/>
-                { recentExperienceData && (<RecentExperience recentData={recentExperienceData} searchString = {searchString} />)  }
-                { (!searchString && popularCategoriesData) && (<PopularCategories popularData={popularCategoriesData} />)  }
+                { recentExperienceData ? <RecentExperience recentData={recentExperienceData} searchString = {searchString} /> : null }
+                { (!searchString && popularCategoriesData) ? <PopularCategories popularData={popularCategoriesData} /> : null }
             </>
         );
     }
