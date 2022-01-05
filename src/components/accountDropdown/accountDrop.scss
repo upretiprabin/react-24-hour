@@ -1,0 +1,39 @@
+.accountDrop {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: $primary-white;
+  border-radius: 33px;
+  justify-content: space-between;
+  border: 1px solid $primary-gray;
+  gap: 10px;
+
+  &__profile-image {
+    height: 26px;
+    width: 26px;
+    border: 2px solid ;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 130%;
+      width: auto;
+    }
+  }
+
+  &__profile-name {
+    margin: 0;
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__icon {
+    color: #C4C4C4;
+    margin-right: 5px;
+  }
+}

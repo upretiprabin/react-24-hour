@@ -6,9 +6,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MomentUtils from '@date-io/moment';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import MainApp from './container/App';
 import store from './store';
-import './App.css';
+import './App.scss';
 
 const App = () => (
     <Provider store={store}>
