@@ -5,7 +5,9 @@ const RecentExperience = ({recentData}) =>{
     console.log("recentdata",recentData)
     return (
         <div className='recent-experience'>
-            <p><strong>Recent HeadLines</strong></p>
+            <div>
+                <p className={""}>Recent HeadLines</p>
+            </div>
             <ul className="list-unstyled mb-0">
                 {recentData && recentData.map((data, index) =>
                     <li className="d-flex align-items-center justify-content-between p-20 border-bottom" key={index}>
