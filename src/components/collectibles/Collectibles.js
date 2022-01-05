@@ -9,7 +9,7 @@ export const Collectibles = (props) => {
                 <h4>Collectibles <span className="profile__tab-heading-count">3</span></h4>
             </div>
             <div className="collectibles">
-                {collectibles.map((collectible) => <IndividualCollectibles {...collectible} />)}
+                {collectibles.map((collectible, index) => <IndividualCollectibles key={'collectibles'+index} {...collectible} />)}
             </div>
         </div>
     );

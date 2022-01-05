@@ -4,20 +4,20 @@ import {faEdit, faFileInvoice} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collectibles} from "../collectibles/Collectibles";
 import {Actions} from "../actions/Actions";
+import ProfileIcon from "./profileIcon/ProfileIcon";
+import { ROUTE_ACTIONS, ROUTE_COLLECTIBLES, ROUTE_CONNECTED_EXPERIENCES } from "./constant";
+import { ROUTE_ALL } from "../transaction/constant";
 
 const Profile = ({data}) =>{
     const hash = useLocation().hash;
-    console.log(data);
     
     return (
         <div className='profile'>
             <div className='profile__header'>
-                    <span className='profile__tag'>
-                        DL
-                    </span>
+                <ProfileIcon name={data.name} size={'md'}/>
                 <div className='profile__icons'>
-                    <FontAwesomeIcon icon={faFileInvoice} />
-                    <FontAwesomeIcon icon={faEdit} />
+                    <Link to={'/transactions'+ROUTE_ALL}><FontAwesomeIcon icon={faFileInvoice} /></Link>
+                    <Link to={'#'}><FontAwesomeIcon icon={faEdit} /></Link>
                 </div>
             </div>
             <div className='profile__details'>
@@ -27,29 +27,29 @@ const Profile = ({data}) =>{
             <div className="profile__tab-wrapper">
                 <ul className="profile__tab-header">
                     <li className='active'>
-                        <Link to={"#collectibles"}> Collectibles </Link>
+                        <Link to={ROUTE_COLLECTIBLES}> Collectibles </Link>
                     </li>
                     <li>
-                        <Link to={"#actions"}> Actions </Link>
+                        <Link to={ROUTE_ACTIONS}> Actions </Link>
                     </li>
                     <li>
-                        <Link to={"#connectedExperiences"}> Connected Experiences </Link>
+                        <Link to={ROUTE_CONNECTED_EXPERIENCES}> Connected Experiences </Link>
                     </li>
                 </ul>
                 <div className='profile__tab-content'>
-                    {"#collectibles" === hash ?
+                    {ROUTE_COLLECTIBLES === hash || '' === hash ?
                         (
                             <Collectibles id="collectibles" {...data}/>
                         ) : null
                     }
 
-                    {"#actions" === hash ?
+                    {ROUTE_ACTIONS === hash ?
                         (
                             <Actions id="actions" />
                         ) : null
                     }
 
-                    {"#connectedExperiences" === hash ?
+                    {ROUTE_CONNECTED_EXPERIENCES === hash ?
                         (
                             <div id="connectedExperiences" className="tab-content">
                                 {JSON.stringify(data.connectionExperiences)}

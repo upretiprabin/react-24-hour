@@ -1,5 +1,5 @@
 /**
- * api service for each page
+ * api service for profile page
  * sends dummy data as a resolved promise
  * */
 

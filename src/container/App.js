@@ -7,6 +7,7 @@ import routerService from "../services/_routerService";
 import AppLayout from "../components/appLayout"
 import {Redirect, Route, withRouter} from "react-router-dom";
 import {LoginHeader} from "../components/loginHeader/LoginHeader";
+import { ROUTE_COLLECTIBLES } from '../components/profile/constant';
 
 class MainApp extends Component {
 
@@ -33,7 +34,7 @@ class MainApp extends Component {
         const { match, location } = this.props;
         let routes = routerService;
         if(location.pathname === "/")
-            return (<Redirect to={'/profile#Collectibles'} />);
+            return (<Redirect to={'/profile' + ROUTE_COLLECTIBLES} />);
         return (
             <AppLayout>
                 {routes && routes.map((route,key)=>

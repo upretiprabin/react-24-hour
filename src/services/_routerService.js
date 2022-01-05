@@ -4,7 +4,7 @@
 
 import ProfileComponent from "../routes/profile";
 import DashboardComponent from "../routes/dashboard";
-import {CreateContact} from "../components/createContact/CreateContact";
+import TransactionPage from "../routes/TransactionsPage";
 
 export default [
     {
@@ -16,7 +16,7 @@ export default [
         component: ProfileComponent
     },
     {
-        path: 'createContact',
-        component: CreateContact
+        path: 'transactions',
+        component: TransactionPage
     }
 ]
