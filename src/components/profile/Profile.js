@@ -10,28 +10,32 @@ const Profile = ({data}) =>{
     console.log(data);
     
     return (
-        <div>
-            <div>
-                <div className="profile-detail">
-                    <div className="left">
-                        <div className="profile-image">
-                        </div>
-                        <div>
-                            <h3>{data.name || ""}</h3>
-                            <p>{data.email || ""}</p>
-                        </div>
-                    </div>
-                    <div className="right">
-                        <span className="icon">view</span> |
-                        <span className="icon"> edit</span>
-                    </div>
+        <div className='profile'>
+            <div className='profile__header'>
+                    <span className='profile__tag'>
+                        DL
+                    </span>
+                <div className='profile__icons'>
+                    <FontAwesomeIcon icon={faFileInvoice} />
+                    <FontAwesomeIcon icon={faEdit} />
                 </div>
-                <div className="profile-tab">
-                    <div className="tab">
-                        <Link to={"#collectibles"}> Collectibles </Link>|
-                        <Link to={"#actions"}> Actions </Link>|
+            </div>
+            <div className='profile__details'>
+                <h3>{data.name || ""}</h3>
+                <p>{data.email || ""}</p>
+            </div>
+            <div className="profile__tab-wrapper">
+                <ul className="profile__tab-header">
+                    <li className='active'>
+                        <Link to={"#collectibles"}> Collectibles </Link>
+                    </li>
+                    <li>
+                        <Link to={"#actions"}> Actions </Link>
+                    </li>
+                    <li>
                         <Link to={"#connectedExperiences"}> Connected Experiences </Link>
-                    </div>
+                    </li>
+                </ul>
                 <div className='profile__tab-content'>
                     {"#collectibles" === hash ?
                         (
@@ -48,14 +52,13 @@ const Profile = ({data}) =>{
                         ) : null
                     }
 
-                        {"#connectedExperiences" === hash ? 
-                            (
-                                <div id="connectedExperiences" className="tab-content">
-                                    {JSON.stringify(data.connectionExperiences)}
-                                </div>
-                            ) : null
-                        }
-                    </div>
+                    {"#connectedExperiences" === hash ?
+                        (
+                            <div id="connectedExperiences" className="tab-content">
+                                {JSON.stringify(data.connectionExperiences)}
+                            </div>
+                        ) : null
+                    }
                 </div>
             </div>
         </div>
