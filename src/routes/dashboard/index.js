@@ -42,8 +42,8 @@ class DashboardComponent extends Component {
         const {recentExperienceData,popularCategoriesData} = this.state;
         return (
             <>
-                { recentExperienceData ? <RecentExperience data={recentExperienceData} /> : null }
-                { popularCategoriesData ? <PopularCategories data={popularCategoriesData} /> : null }
+                { recentExperienceData ? <RecentExperience recentData={recentExperienceData} /> : null }
+                { popularCategoriesData ? <PopularCategories popularData={popularCategoriesData} /> : null }
             </>
         );
     }
