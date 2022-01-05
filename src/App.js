@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MomentUtils from '@date-io/moment';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import MainApp from './container/App';
+import store from './store';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+    <Provider store={store}>
+      <MuiPickersUtilsProvider utils={MomentUtils}>
+        <Router>
+          <Switch>
+            <Route path="/" component={MainApp} />
+          </Switch>
+        </Router>
+      </MuiPickersUtilsProvider>
+    </Provider>
+);
+
 
 export default App;
