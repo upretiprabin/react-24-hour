@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RecentExperience from "../../components/recentExperience/RecentExperience";
 import {loadRecentExperienceData,loadPopularCategoryData} from "../../services/dashboard/DashboardService";
 import PopularCategories from "../../components/popularCategories/PopularCategories";
+import ExperienceSearch from "../../components/recentExperience/ExperienceSearch";
 
 class DashboardComponent extends Component {
 
@@ -9,7 +10,8 @@ class DashboardComponent extends Component {
 
     state = {
         recentExperienceData : null,
-        popularCategoriesData : null
+        popularCategoriesData : null,
+        searchString : null
     };
 
     static getDerivedStateFromProps(props,state){
@@ -38,12 +40,20 @@ class DashboardComponent extends Component {
         this._isMounted = false;
     }
 
+    handleSearch(searchString){
+        this.changeState({searchString})
+    }
+
+
     render() {
-        const {recentExperienceData,popularCategoriesData} = this.state;
+        const {recentExperienceData,popularCategoriesData,searchString} = this.state;
         return (
             <>
-                { recentExperienceData ? <RecentExperience recentData={recentExperienceData} /> : null }
-                { popularCategoriesData ? <PopularCategories popularData={popularCategoriesData} /> : null }
+                <div className={"experience-search"}>
+                    <ExperienceSearch handleSearch={(searchString)=>{this.handleSearch(searchString)}}/>
+                </div>
+                { recentExperienceData ? <RecentExperience recentData={recentExperienceData} searchString = {searchString} /> : null }
+                { (!searchString && popularCategoriesData) ? <PopularCategories popularData={popularCategoriesData} /> : null }
             </>
         );
     }
