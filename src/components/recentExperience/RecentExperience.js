@@ -1,5 +1,5 @@
 import React from "react";
-import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 import {ROUTE_EXPERIENCE_DETAIL} from "../experienceDetail/constant";
@@ -16,45 +16,37 @@ const RecentExperience = ({recentData,searchString}) =>{
     recentData = getDataFromSearch(recentData,searchString)
     return (
         <div className='recent-experience'>
-            <div>
+            <div className='section-title'>
                 {
                     searchString &&
-                    <p className={"text-muted"}>{recentData?.length} experience found</p>
+                    <h6 className={"text-muted"}>{recentData?.length} experience found</h6>
                 }
                 {
                     !searchString &&
-                    <p className={""}>Recent Experiences</p>
+                    <h6 className={""}>Recent Experiences</h6>
                 }
             </div>
-            <ul className="list-unstyled mb-0">
-                {recentData && recentData.map((data, index) =>{
-                    let link = ROUTE_EXPERIENCE_DETAIL+"#"+data.id
-                        return(
-                            <li className="d-flex align-items-center justify-content-between p-20 border-bottom" key={index}>
-                                <div className="d-flex">
-                                    <div className="mr-3">
-                                        <img src={data.image} alt={data.title} height="80" width="80" className="img-fluid" />
-                                    </div>
-                                    <div className="">
-                                        <h5 className="mb-2">{data.title}</h5>
-                                        <div className="d-flex text-muted">
-                                            <span className="mx-1">{data.label}</span>
-                                        </div>
-                                        <div className="d-flex text-muted">
-                                            <span className="mx-1">{data.usersCount}</span>
-                                        </div>
-                                    </div>
+            {recentData && recentData.map((data, index) =>{
+                let link = ROUTE_EXPERIENCE_DETAIL+"#"+data.id
+                    return(
+                        <div key={index}>
+                            <div className="collectible">
+                                <div className="collectible__image">
+                                    <img src={data.image} alt={data.title} className="img-fluid" />
                                 </div>
-                                <div className="text-right">
-                                    <Link to={link}>
-                                        <FontAwesomeIcon icon={faArrowRight} />
-                                    </Link>
+                                <div className="collectible__details">
+                                    <p className="title">{data.title}</p>
+                                    <p>{data.label}</p>
+                                    <p className="by"><span>{data.usersCount}</span></p>
                                 </div>
-                            </li>
-                        );
-                    }
-                )}
-            </ul>
+                                <Link to={link}>
+                                    <FontAwesomeIcon className='collectible__icon' icon={faAngleRight} />
+                                </Link>
+                            </div>
+                        </div>
+                    );
+                }
+            )}
         </div>
     );
 }

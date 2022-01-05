@@ -1,5 +1,5 @@
 import React from "react";
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faFilter, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { Input } from 'reactstrap';
 
@@ -8,6 +8,7 @@ const ExperienceSearch = ({handleSearch,searchString}) =>{
     return (
         <div className='experience-search'>
             <div className="search-wrapper mb-0 position-relative">
+                <FontAwesomeIcon icon={faSearch} />
                 <Input
                     type="text"
                     name="search-users"
@@ -17,9 +18,8 @@ const ExperienceSearch = ({handleSearch,searchString}) =>{
                     onChange={(e) => {handleSearch(e.target.value);}}
                     value={searchString}
                 />
-                <FontAwesomeIcon icon={faSearch} />
             </div>
-
+            <FontAwesomeIcon icon={faFilter} />
         </div>
     );
 }

@@ -3,6 +3,8 @@ import RecentExperience from "../../components/recentExperience/RecentExperience
 import {loadRecentExperienceData,loadPopularCategoryData} from "../../services/dashboard/DashboardService";
 import PopularCategories from "../../components/popularCategories/PopularCategories";
 import ExperienceSearch from "../../components/recentExperience/ExperienceSearch";
+import FilterModal from "../../components/filter/filterModal";
+import {filterData} from "../../components/filter/Data";
 
 class DashboardComponent extends Component {
 
@@ -49,11 +51,10 @@ class DashboardComponent extends Component {
         const {recentExperienceData,popularCategoriesData,searchString} = this.state;
         return (
             <>
-                <div className={"experience-search"}>
-                    <ExperienceSearch handleSearch={(searchString)=>{this.handleSearch(searchString)}}/>
-                </div>
-                { recentExperienceData ? <RecentExperience recentData={recentExperienceData} searchString = {searchString} /> : null }
-                { (!searchString && popularCategoriesData) ? <PopularCategories popularData={popularCategoriesData} /> : null }
+                <ExperienceSearch handleSearch={(searchString)=>{this.handleSearch(searchString)}}/>
+                <FilterModal/>
+                { recentExperienceData && (<RecentExperience recentData={recentExperienceData} searchString = {searchString} />)  }
+                { (!searchString && popularCategoriesData) && (<PopularCategories popularData={popularCategoriesData} />)  }
             </>
         );
     }

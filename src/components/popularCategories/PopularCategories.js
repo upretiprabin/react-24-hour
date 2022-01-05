@@ -1,19 +1,25 @@
 import React from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 const PopularCategories = ({popularData}) =>{
 
     return (
-        <div className='popular-categories'>
+        <div className='section-title'>
             <div>
                 <p className={""}>Popular Categories</p>
             </div>
-            <div className="d-flex justify-content-between">
+            <div className="tile-wrapper">
                 {popularData && popularData.map((data,index)=>{
                     return(
-                        <div key={index} className="">
-                            <div className="mr-3">
+                        <div key={index} className='tile'>
+                            <div className='tile__image'>
                                 <img src={data.image} alt={data.title} height="80" width="80" className="img-fluid" />
-                                <h5 className="mb-0">{data.title}</h5>
+                            </div>
+                            <div className='tile__footer'>
+                                <p className='tile__title'>{data.title}</p>
+                                <FontAwesomeIcon className='collectible__icon' icon={faAngleRight} />
                             </div>
                         </div>
                     );
