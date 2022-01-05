@@ -1,7 +1,6 @@
-import React, {useState} from "react";
-import {connect} from "react-redux";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import {faEdit, faFileInvoice, faFilePrescription, faLongArrowAltLeft} from "@fortawesome/free-solid-svg-icons";
+import {faEdit, faFileInvoice} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collectibles} from "../collectibles/Collectibles";
 
@@ -66,12 +65,3 @@ const Profile = ({data}) =>{
 }
 
 export default Profile;
-
-
-// // map state to props
-// const mapStateToProps = ({ authUser }) => {
-//     const { firstName, lastName } = authUser;
-//     return { firstName, lastName };
-// };
-
-// export default connect(mapStateToProps)(Profile);
