@@ -1,0 +1,12 @@
+.activities {
+  &__image {
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    border-radius: 100%;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}

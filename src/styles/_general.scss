@@ -71,3 +71,24 @@
   text-align: center;
   line-height: 20px;
 }
+
+.MuiAppBar-colorPrimary {
+  color: $primary-text-color !important;
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.MuiPaper-elevation4 {
+  box-shadow: none;
+  border-bottom: 1px solid $primary-gray;
+}
+
+.Mui-selected {
+  .MuiTab-wrapper {
+    font-weight: 600;
+  }
+}
+
+.MuiTab-wrapper {
+  color: $primary-text-color;
+}
