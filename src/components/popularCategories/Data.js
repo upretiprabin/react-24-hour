@@ -1,42 +1,48 @@
 /**
  * dummy data for each component are placed in a separate file
  * */
+import exchangesImage from "../../images/exchanges.png";
+import gamesImage from "../../images/games.png";
+import marketPlaceImage from "../../images/marketPlace.png";
+import defiImage from "../../images/defi.png";
+import collectiblesImage from "../../images/collectibles.png";
+import utilitiesImage from "../../images/utilities.png";
 
 export const popularCategoriesData = [
     {
         "id":1,
         "title": "Exchanges",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU",
+        "image": exchangesImage,
         "show" : true
     },
     {
         "id":2,
         "title": "Games",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
+        "image": gamesImage,
         "show" : true
     },
     {
         "id":3,
         "title": "Marketplaces",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU",
+        "image": marketPlaceImage,
         "show" : true
     },
     {
         "id":4,
         "title": "Defi",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU",
+        "image": defiImage,
         "show" : true
     },
     {
         "id":5,
         "title": "Collectibles",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
+        "image": collectiblesImage,
         "show" : true
     },
     {
         "id":6,
         "title": "Utilities",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU",
+        "image": utilitiesImage,
         "show" : true
     }
 ]

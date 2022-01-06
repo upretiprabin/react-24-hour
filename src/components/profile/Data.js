@@ -1,6 +1,9 @@
 /**
  * dummy data for each component are placed in a separate file
  * */
+import userLogoImage from "../../images/userLogo.png";
+import defiSwapImage from "../../images/defiSwap.png";
+import docuSignImage from "../../images/docuSign.png";
 
 export const Profile = {
     "id": 1,
@@ -12,29 +15,29 @@ export const Profile = {
         {
             "title": "Digital Ninja",
             "by": "devon.near",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU"
+            "image": userLogoImage
         },
         {
             "title": "Panda",
             "by": "devon.near",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU"
+            "image": userLogoImage
         },
         {
             "title": "Digital Ninja",
             "by": "devon.near",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU"
+            "image": userLogoImage
         }
     ],
     "connectionExperiences": [
         {
             "title": "Docu sign",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU",
+            "image": docuSignImage,
             "connectionDate": "12/10/2021 12:30 PM",
             "status": "Disconnect"
         },
         {
             "title": "Defi swap",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
+            "image": defiSwapImage,
             "connectionDate": "12/10/2021 12:30 PM",
             "status": "Disconnect"
         }

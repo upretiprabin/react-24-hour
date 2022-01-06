@@ -1,12 +1,15 @@
 /**
  * dummy data for each component are placed in a separate file
  * */
+import userLogoImage from "../../images/userLogo.png";
+import defiSwapImage from "../../images/defiSwap.png";
+import docuSignImage from "../../images/docuSign.png";
 
 export const experienceDetailData = [
     {
         "id" : 1,
         "title": "Docu sign",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
+        "image": docuSignImage,
         "label": "sign smart contracts seamlessly",
         "usersCount": "+1K users",
         "overview":"it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime paperlessly.",
@@ -14,19 +17,19 @@ export const experienceDetailData = [
         "activities":[
             {
                 "userName" : "johndoe.near",
-                "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU",
+                "image":userLogoImage,
                 "description" : "johndoe.near signed the contract successfully",
                 "date" : "2 days ago"
             },
             {
                 "userName" : "CryptoKing.near",
-                "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
+                "image":userLogoImage,
                 "description" : "CryptoKing.near requested to sign the contract",
                 "date" : "3 days ago"
             },
             {
                 "userName" : "maxwell.near",
-                "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU",
+                "image":userLogoImage,
                 "description" : "maxwell.near requested to sign the contract",
                 "date" : "3 days ago"
             }
@@ -35,7 +38,7 @@ export const experienceDetailData = [
     {
         "id" : 2,
         "title": "Defi swap",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU",
+        "image": defiSwapImage,
         "label": "Swap your digital assets",
         "usersCount": "+1K users",
         "overview":"it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime paperlessly.",
@@ -43,19 +46,19 @@ export const experienceDetailData = [
         "activities":[
             {
                 "userName" : "johndoe.near",
-                "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU",
+                "image":userLogoImage,
                 "description" : "johndoe.near signed the contract successfully",
                 "date" : "2 days ago"
             },
             {
                 "userName" : "CryptoKing.near",
-                "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
+                "image":userLogoImage,
                 "description" : "CryptoKing.near requested to sign the contract",
                 "date" : "3 days ago"
             },
             {
                 "userName" : "maxwell.near",
-                "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU",
+                "image":userLogoImage,
                 "description" : "maxwell.near requested to sign the contract",
                 "date" : "3 days ago"
             }

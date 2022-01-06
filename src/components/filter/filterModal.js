@@ -7,6 +7,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import {setFilter} from "../../redux/actions/FilterActions";
+import exchangesImage from "../../images/exchanges.png";
 
 const handleSelect = (checked,filterId,filterData,setState,setFilter) =>{
     let filterList = filterData.map((data)=>{
