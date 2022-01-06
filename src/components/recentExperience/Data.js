@@ -8,14 +8,14 @@ export const recentExperienceData = [
     {
         "id":1,
         "title": "Docu sign",
-        "image": defiSwapImage,
+        "image": docuSignImage,
         "label": "Swap your digital assets",
         "usersCount": "+200 users"
     },
     {
         "id":2,
         "title": "Defi swap",
-        "image": docuSignImage,
+        "image": defiSwapImage,
         "label": "sign smart contracts seamlessly",
         "usersCount": "+1K users"
     }
