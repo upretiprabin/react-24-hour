@@ -3,7 +3,7 @@ import RecentExperience from "../../components/recentExperience/RecentExperience
 import {loadRecentExperienceData,loadPopularCategoryData} from "../../services/dashboard/DashboardService";
 import PopularCategories from "../../components/popularCategories/PopularCategories";
 import ExperienceSearch from "../../components/recentExperience/ExperienceSearch";
-import FilterModal from "../../components/filter/filterModal";
+import {connect} from "react-redux";
 import {filterData} from "../../components/filter/Data";
 
 class DashboardComponent extends Component {
@@ -49,14 +49,19 @@ class DashboardComponent extends Component {
 
     render() {
         const {recentExperienceData,popularCategoriesData,searchString} = this.state;
+        const {filterData} = this.props;
         return (
             <>
                 <ExperienceSearch handleSearch={(searchString)=>{this.handleSearch(searchString)}}/>
                 { recentExperienceData ? <RecentExperience recentData={recentExperienceData} searchString = {searchString} /> : null }
-                { (!searchString && popularCategoriesData) ? <PopularCategories popularData={popularCategoriesData} /> : null }
+                { (!searchString && popularCategoriesData) ? <PopularCategories popularData={popularCategoriesData} filter={filterData}/> : null }
             </>
         );
     }
 }
+// map state to props
+const mapStateToProps = ({ filter }) => {
+    return { filterData : filter };
+};
 
-export default DashboardComponent;
+export default connect(mapStateToProps)(DashboardComponent);

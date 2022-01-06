@@ -1,9 +1,12 @@
 import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
-import {Link} from "react-router-dom";
 
-const PopularCategories = ({popularData}) =>{
+const getCategoryShow = (categoryTitle,filterData) =>{
+    return filterData?.filter((filter)=> filter.label===categoryTitle)[0]?.show
+}
+
+const PopularCategories = ({popularData,filter}) =>{
 
     return (
         <div className='section-title'>
@@ -15,7 +18,7 @@ const PopularCategories = ({popularData}) =>{
                     return(
                         <div key={index} className='tile'>
                             {
-                                data.show &&
+                                getCategoryShow(data.title,filter.filterList) &&
                                 <div>
                                     <div className='tile__image'>
                                         <img src={data.image} alt={data.title} height="80" width="80" className="img-fluid" />
