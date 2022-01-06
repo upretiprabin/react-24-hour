@@ -50,10 +50,11 @@ class DashboardComponent extends Component {
     render() {
         const {recentExperienceData,popularCategoriesData,searchString} = this.state;
         const {filterData} = this.props;
+        let isRecentExperienceShow = filterData?.filterList?.filter((filter)=>filter.id===1)[0]?.show
         return (
             <>
                 <ExperienceSearch handleSearch={(searchString)=>{this.handleSearch(searchString)}}/>
-                { recentExperienceData ? <RecentExperience recentData={recentExperienceData} searchString = {searchString} /> : null }
+                { isRecentExperienceShow && recentExperienceData ? <RecentExperience recentData={recentExperienceData} searchString = {searchString} /> : null }
                 { (!searchString && popularCategoriesData) ? <PopularCategories popularData={popularCategoriesData} filter={filterData}/> : null }
             </>
         );

@@ -19,7 +19,7 @@ export const filterData = [
     },
     {
         "id" : 4,
-        "label" : "Marketplace",
+        "label" : "Marketplaces",
         "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
         "show" : true
     },

@@ -15,21 +15,24 @@ const PopularCategories = ({popularData,filter}) =>{
             </div>
             <div className="tile-wrapper">
                 {popularData && popularData.map((data,index)=>{
+                    let isTileShow = getCategoryShow(data.title,filter?.filterList)
                     return(
-                        <div key={index} className='tile'>
-                            {
-                                getCategoryShow(data.title,filter.filterList) &&
-                                <div>
-                                    <div className='tile__image'>
-                                        <img src={data.image} alt={data.title} className="img-fluid" />
-                                    </div>
-                                    <div className='tile__footer'>
-                                        <p className='tile__title'>{data.title}</p>
-                                        <FontAwesomeIcon className='collectible__icon' icon={faAngleRight} />
+                        <>
+                            {isTileShow &&
+
+                                <div key={index} className='tile'>
+                                    <div>
+                                        <div className='tile__image'>
+                                            <img src={data.image} alt={data.title} className="img-fluid"/>
+                                        </div>
+                                        <div className='tile__footer'>
+                                            <p className='tile__title'>{data.title}</p>
+                                            <FontAwesomeIcon className='collectible__icon' icon={faAngleRight}/>
+                                        </div>
                                     </div>
                                 </div>
                             }
-                        </div>
+                        </>
                     );
                 })}
             </div>
