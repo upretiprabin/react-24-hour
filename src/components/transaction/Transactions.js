@@ -31,9 +31,9 @@ const Transactions = ({data}) => {
                 <ProfileIcon name={authUser.firstName + ' ' + authUser.lastName} size={'sm'}/>
             </div>
             <div className='filter'>
-                <Link className='filter__option active' to={ROUTE_ALL}> All </Link>
-                <Link className='filter__option' to={ROUTE_SENT}> Sent </Link>
-                <Link className='filter__option' to={ROUTE_RECEIVED}> Received </Link>
+                <Link className={'filter__option ' + (ROUTE_ALL === hash || '' === hash ? 'active': '')} to={ROUTE_ALL}> All </Link>
+                <Link className={'filter__option ' + (ROUTE_SENT === hash ? 'active': '')} to={ROUTE_SENT}> Sent </Link>
+                <Link className={'filter__option ' + (ROUTE_RECEIVED === hash ? 'active': '')} to={ROUTE_RECEIVED}> Received </Link>
             </div>
             <div>
                 <TransactionItems data={getTransactions(hash)} />

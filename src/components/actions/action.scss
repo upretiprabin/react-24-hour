@@ -11,3 +11,13 @@
     transform: translateY(-50%) rotate(45deg);
   }
 }
+
+.modal {
+  display: block;
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

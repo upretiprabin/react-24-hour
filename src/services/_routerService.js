@@ -7,6 +7,7 @@ import DashboardComponent from "../routes/dashboard";
 import TransactionsComponent from "../routes/TransactionsComponent";
 import ExperienceComponent from "../routes/experience";
 import EditContactComponent from "../routes/EditContactComponent";
+import ActionFormComponent from "../routes/ActionFormPage";
 
 export default [
     {
@@ -28,5 +29,9 @@ export default [
     {
         path: 'edit-contact/:userId',
         component: EditContactComponent
+    },
+    {
+        path: 'action',
+        component: ActionFormComponent
     }
 ]

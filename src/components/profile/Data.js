@@ -4,6 +4,7 @@
 
 export const Profile = {
     "id": 1,
+    "username": "devon.near",
     "firstName": "Devon",
     "lastName": "Lane",
     "email": "devonlane@gmail.com",

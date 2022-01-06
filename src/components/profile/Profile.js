@@ -38,7 +38,7 @@ const Profile = ({data}) =>{
                 </ul>
                 <div className='profile__tab-content'>
                     {ROUTE_COLLECTIBLES === hash || '' === hash ? (<Collectibles id="collectibles" {...data}/>) : null}
-                    {ROUTE_ACTIONS === hash ? (<Actions id="actions" />) : null}
+                    {ROUTE_ACTIONS === hash ? (<Actions id="actions" profile={data} />) : null}
                     {ROUTE_CONNECTED_EXPERIENCES === hash ? (<Experiences id="experiences" {...data}/>) : null}
                 </div>
             </div>

@@ -28,9 +28,9 @@ export const loadContactDetail = (context, userId) => {
 }
 
 export const updateContactDetail = (context, userId, data) => {
-    saveContactDetail({...data, userId: userId}).then(() => {
+    saveContactDetail({...data, userId: userId}).then((responseData) => {
         context.changeState({
-            contactDetail: data,
+            contactDetail: responseData,
             editResponse : 'success'
         });
     }).catch((e)=>{

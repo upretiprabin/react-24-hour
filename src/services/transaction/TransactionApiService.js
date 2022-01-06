@@ -8,3 +8,7 @@
  export const getAllTransactions = () =>{
      return Promise.resolve(Transactions);
  }
+
+export const createTransaction = (data) =>{
+    return Promise.resolve(data);
+}
