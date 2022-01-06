@@ -8,6 +8,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import {setFilter} from "../../redux/actions/FilterActions";
 import exchangesImage from "../../images/exchanges.png";
+import gamesImage from "../../images/games.png";
+import marketPlaceImage from "../../images/marketPlace.png";
+import defiImage from "../../images/defi.png";
+import collectiblesImage from "../../images/collectibles.png";
+import utilitiesImage from "../../images/utilities.png";
 
 const handleSelect = (checked,filterId,filterData,setState,setFilter) =>{
     let filterList = filterData.map((data)=>{
@@ -41,31 +46,31 @@ const FilterModal = ({filter,setFilter}) =>{
                 <FormGroup>
                     <FormControlLabel control={
                         <Checkbox color="primary" checked={isAllExperienceChecked} onChange={(event,checked)=>{handleSelect(checked,1,filterData,setIsAllExperienceChecked,setFilter)}} value={1} />
-                    } label={"All Experiences"}
+                    } label={<span><span className={"ml-2"}>All Experiences</span></span>}
                     />
                     <FormControlLabel control={
                         <Checkbox color="primary" checked={isExchangesChecked} onChange={(event,checked)=>{handleSelect(checked,2,filterData,setIsExchangesChecked,setFilter)}} value={2} />
-                    } label={"Exchanges"}
+                    } label={<span><img className={"filter-image"} src={exchangesImage}/><span className={"ml-2"}>Exchanges</span></span>}
                     />
                     <FormControlLabel control={
                         <Checkbox color="primary" checked={isGamesChecked} onChange={(event,checked)=>{handleSelect(checked,3,filterData,setIsGamesChecked,setFilter)}} value={3} />
-                    } label={"Games"}
+                    } label={<span><img className={"filter-image"} src={gamesImage}/><span className={"ml-2"}>Games</span></span>}
                     />
                     <FormControlLabel control={
                         <Checkbox color="primary" checked={isMarketPlaceChecked} onChange={(event,checked)=>{handleSelect(checked,4,filterData,setIsMarketPlaceChecked,setFilter)}} value={4} />
-                    } label={"Marketplace"}
+                    } label={<span><img className={"filter-image"} src={marketPlaceImage}/><span className={"ml-2"}>Marketplace</span></span>}
                     />
                     <FormControlLabel control={
                         <Checkbox color="primary" checked={isDefiChecked} onChange={(event,checked)=>{handleSelect(checked,5,filterData,setIsDefiChecked,setFilter)}} value={5} />
-                    } label={"Defi"}
+                    } label={<span><img className={"filter-image"} src={defiImage}/><span className={"ml-2"}>Defi</span></span>}
                     />
                     <FormControlLabel control={
                         <Checkbox color="primary" checked={isCollectiChecked} onChange={(event,checked)=>{handleSelect(checked,6,filterData,setIsCollectiChecked,setFilter)}} value={6} />
-                    } label={"Collectibles"}
+                    } label={<span><img className={"filter-image"} src={collectiblesImage}/><span className={"ml-2"}>Collectibles</span></span>}
                     />
                     <FormControlLabel control={
                         <Checkbox color="primary" checked={isUtilitiesChecked} onChange={(event,checked)=>{handleSelect(checked,7,filterData,setIsUtilitesChecked,setFilter)}} value={7} />
-                    } label={"Utilities"}
+                    } label={<span><img className={"filter-image"} src={utilitiesImage}/><span className={"ml-2"}>Utilities</span></span>}
                     />
                 </FormGroup>
             </div>
