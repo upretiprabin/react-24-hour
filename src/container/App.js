@@ -2,12 +2,9 @@
  * App routes are loaded here
  */
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { Route, withRouter } from "react-router-dom";
+import AppLayout from "../components/appLayout";
 import routerService from "../services/_routerService";
-import AppLayout from "../components/appLayout"
-import {Redirect, Route, withRouter} from "react-router-dom";
-import {LoginHeader} from "../components/loginHeader/LoginHeader";
-import { ROUTE_COLLECTIBLES } from '../components/profile/constant';
 
 class MainApp extends Component {
 
@@ -31,14 +28,11 @@ class MainApp extends Component {
     }
 
     render() {
-        const { match, location } = this.props;
         let routes = routerService;
-        if(location.pathname === "/")
-            return (<Redirect to={'/profile' + ROUTE_COLLECTIBLES} />);
         return (
             <AppLayout>
                 {routes && routes.map((route,key)=>
-                    <Route key={key} path={`/${route.path}`} component={route.component} />
+                    <Route key={key} exact path={`/${route.path}`} component={route.component} />
                 )}
             </AppLayout>
         );

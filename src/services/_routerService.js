@@ -11,6 +11,10 @@ import ActionFormComponent from "../routes/ActionFormPage";
 
 export default [
     {
+        path: '',
+        component: DashboardComponent
+    },
+    {
         path: 'dashboard',
         component: DashboardComponent
     },

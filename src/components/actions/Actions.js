@@ -17,16 +17,21 @@ export const Actions = ({profile}) => {
     return (
         <>
             <div className="action">
-                <button className='btn btn--primary mb-3 btn-block' onClick={() => onActionTypeChange(ACTION_TYPE_SEND)}>
-                    Send
-                    <FontAwesomeIcon className='action__icon' icon={faArrowUp} />
-                </button>
-                <button className='btn btn--primary btn-block' onClick={() => onActionTypeChange(ACTION_TYPE_RECEIVE)}>
-                    Receive
-                    <FontAwesomeIcon className='action__icon' icon={faArrowDown} />
-                </button>
+                
+                <ActionPageModal type={actionType} profile={profile} button={
+                    <button className='btn btn--primary mb-3 btn-block' onClick={() => onActionTypeChange(ACTION_TYPE_SEND)}>
+                        Send
+                        <FontAwesomeIcon className='action__icon' icon={faArrowUp} />
+                    </button>
+                }/>
+                <ActionPageModal type={actionType} profile={profile} button={
+                    <button className='btn btn--primary btn-block' onClick={() => onActionTypeChange(ACTION_TYPE_RECEIVE)}>
+                        Receive
+                        <FontAwesomeIcon className='action__icon' icon={faArrowDown} />
+                    </button>
+                }/>
+                
             </div>
-            { actionType ? (<ActionPageModal type={actionType} style={actionType ? {display: 'block'} : {display: 'none'}} onClose={onClose} profile={profile} />) : null}
         </>
     );
 };
