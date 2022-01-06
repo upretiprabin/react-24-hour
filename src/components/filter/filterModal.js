@@ -35,7 +35,7 @@ const FilterModal = ({filter}) =>{
     return (
         <ModalLayout modalIcon={<FontAwesomeIcon icon={faFilter} title={"Filter"}/>}>
             <div>
-                <h5>Filter</h5>
+                <h5>Filter <span className='number-tag'>2</span></h5>
                 <FormGroup>
                     <FormControlLabel control={
                         <Checkbox color="primary" checked={isAllExperienceChecked} onChange={(event,checked)=>{handleSelect(checked,1,filterData,setIsAllExperienceChecked)}} value={1} />

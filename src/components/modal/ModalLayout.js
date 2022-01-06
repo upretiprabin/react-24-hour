@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Modal, ModalBody } from 'reactstrap';
-import { faWindowClose} from "@fortawesome/free-solid-svg-icons";
+import {faTimes, faWindowClose} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const ModalLayout = ({modalIcon,children}) =>{
@@ -8,7 +8,7 @@ const ModalLayout = ({modalIcon,children}) =>{
     const[open,setOpen] = useState(false);
     return (
         <div>
-            <span className={"ml-5"} onClick={()=>{setOpen(true)}}>{modalIcon}</span>
+            <span onClick={()=>{setOpen(true)}}>{modalIcon}</span>
             <Modal
                 isOpen={open}
                 className="custom-modal"
@@ -16,9 +16,7 @@ const ModalLayout = ({modalIcon,children}) =>{
                 scrollable={false}
             >
                 <ModalBody>
-                    <div>
-                        <span onClick={()=>{setOpen(false)}}><FontAwesomeIcon icon={faWindowClose} title={"Close"}/></span>
-                    </div>
+                    <span className='modal__close' onClick={()=>{setOpen(false)}}><FontAwesomeIcon icon={faTimes} title={"Close"}/></span>
                     <div>
                         {children}
                     </div>

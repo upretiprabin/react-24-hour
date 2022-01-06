@@ -57,3 +57,17 @@
     }
   }
 }
+
+.number-tag {
+  background-color: $link-color;
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+  color: $primary-white;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}

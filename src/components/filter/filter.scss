@@ -1,0 +1,15 @@
+.MuiTypography-root {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &.MuiFormControlLabel-label.MuiTypography-body1 {
+    &:before {
+      content: '';
+      display: inline-block;
+      background: $header-background;
+      height: 35px;
+      width: 35px;
+      border-radius: 100%;
+    }
+  }
+}
