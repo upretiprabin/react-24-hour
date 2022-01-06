@@ -6,37 +6,37 @@ export const popularCategoriesData = [
     {
         "id":1,
         "title": "Exchanges",
-        "image": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU",
         "show" : true
     },
     {
         "id":2,
         "title": "Games",
-        "image": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
         "show" : true
     },
     {
         "id":3,
         "title": "Marketplaces",
-        "image": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU",
         "show" : true
     },
     {
         "id":4,
         "title": "Defi",
-        "image": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU",
         "show" : true
     },
     {
         "id":5,
         "title": "Collectibles",
-        "image": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
         "show" : true
     },
     {
         "id":6,
         "title": "Utilities",
-        "image": "",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU",
         "show" : true
     }
 ]

@@ -12,6 +12,14 @@
     width: 60px;
     background: $primary-gray;
     border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__details {

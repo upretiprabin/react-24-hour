@@ -12,29 +12,29 @@ export const Profile = {
         {
             "title": "Digital Ninja",
             "by": "devon.near",
-            "image": ""
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU"
         },
         {
             "title": "Panda",
             "by": "devon.near",
-            "image": ""
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU"
         },
         {
             "title": "Digital Ninja",
             "by": "devon.near",
-            "image": ""
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3TO8NHBRZWf4rkEyvzmomsVrltQzWbIsPA&usqp=CAU"
         }
     ],
     "connectionExperiences": [
         {
             "title": "Docu sign",
-            "image": "",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcFPiSK5sdNYPPaavK_tekvp0_3UOALMnjg&usqp=CAU",
             "connectionDate": "12/10/2021 12:30 PM",
             "status": "Disconnect"
         },
         {
             "title": "Defi swap",
-            "image": "",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE4owpIwm0FS_lPNbZnwzLj6ShokhJQYFPA&usqp=CAU",
             "connectionDate": "12/10/2021 12:30 PM",
             "status": "Disconnect"
         }
