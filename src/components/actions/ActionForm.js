@@ -15,7 +15,7 @@ const ActionForm = ({type, subType, onSubmit, user, fullName}) => {
     }
     return(
         <>
-            <div>
+            <div className='page-title'>
                 <ActionPageTitle title={link.title} icon={link.icon} />
             </div>
             <div>
@@ -24,28 +24,32 @@ const ActionForm = ({type, subType, onSubmit, user, fullName}) => {
                         onSubmit={onSubmit}
                         render={({handleSubmit}) => (
                         <form onSubmit={handleSubmit}>
-                            <div>
+                            <div className='form-group'>
                                 <label htmlFor="to">To</label>
-                                <div>
+                                <div className='userInput'>
                                     <ProfileIcon name={fullName || null} size={'sm'}/>
                                     <input type="text" name="to" placeholder="" defaultValue={user || null} />
                                 </div>
                             </div>
-                            <div>
-                                <label htmlFor="send">Send</label>
-                                <div>
-                                    Near Token <input type="radio" name="send" id="NEAR" placeholder="" onClick={() => onSubTypeChange(ACTION_SUB_TYPE_SEND_NEAR)} />
-                                    NFT <input type="radio" name="send" id="NEF" placeholder=""  onClick={() => onSubTypeChange(ACTION_SUB_TYPE_SEND_NFT)}/>
+                            <div className='form-inline mb-2'>
+                                <label htmlFor="send" className='mr-3'>Send:</label>
+                                <div className='action-radio'>
+                                    <input type="radio" name="send" id="NEAR" placeholder="" className='near-option' onClick={() => onSubTypeChange(ACTION_SUB_TYPE_SEND_NEAR)} />
+                                    <label htmlFor="NEAR" >Near Token</label>
+                                    <input type="radio" name="send" id="NEF" placeholder="" className='nft-option'  onClick={() => onSubTypeChange(ACTION_SUB_TYPE_SEND_NFT)}/>
+                                    <label htmlFor="NEF" >NFT</label>
                                 </div>
                             </div>
-                            <div>
+                            <div className='form-group'>
                                 <label htmlFor="amount">Amount</label>
-                                <div>
+                                <div className='action-amount'>
                                     <Field name="amount" component="input" placeholder="" />
-                                    <span>{actionSubType === ACTION_SUB_TYPE_SEND_NEAR ? 'NEAR' : 'NFT'}</span>
+                                    <span className='type'>{actionSubType === ACTION_SUB_TYPE_SEND_NEAR ? 'NEAR' : 'NFT'}</span>
                                 </div>
                             </div>
-                            <button type="submit"> Send <span>{link.icon}</span></button>
+                            <div className='text-center'>
+                                <button type="submit" className='btn btn-secondary'> Send <span className='d-inline-block ml-2'>{link.icon}</span></button>
+                            </div>
                         </form>
                     )} />
                     : <p>{'No Form for Receive'}</p>

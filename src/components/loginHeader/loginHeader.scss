@@ -10,6 +10,14 @@
     display: flex;
     gap: 10px;
     color: $header-icon-color;
+    align-items: center;
+
+    a {
+      color: inherit;
+      &:hover {
+        color: darken($header-icon-color, 20%);
+      }
+    }
   }
 }
 

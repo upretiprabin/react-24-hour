@@ -19,7 +19,7 @@ const PopularCategories = ({popularData,filter}) =>{
                         <div key={index} className='tile'>
                             {
                                 getCategoryShow(data.title,filter.filterList) &&
-                                <div className='tile'>
+                                <div>
                                     <div className='tile__image'>
                                         <img src={data.image} alt={data.title} className="img-fluid" />
                                     </div>

@@ -6,11 +6,13 @@ const Details = ({detailData}) =>{
         <div className='experience-details'>
             {detailData &&
             <div>
-                <p>Overview</p>
+                <div className='section-title'>
+                    <h6>Overview</h6>
+                </div>
                 <div>
                     {detailData.overview}
                 </div>
-                <a>{detailData.url}</a>
+                <a href={detailData.url} target='_blank'>{detailData.url}</a>
             </div>
             }
         </div>

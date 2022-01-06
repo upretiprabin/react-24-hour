@@ -17,7 +17,7 @@ const Activities = ({activitiesData}) =>{
                                 </div>
                                 <div className="collectible__details pt-0">
                                     <p className="title">{data.description}</p>
-                                    <p className="by">connected{data.date}</p>
+                                    <p className="by">Connected {data.date}</p>
                                 </div>
                             </div>
                         </div>

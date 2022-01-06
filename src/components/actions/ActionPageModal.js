@@ -8,9 +8,9 @@ export const ActionPageModal = ({type, button, profile}) => {
     const links = ACTION_TYPE_SEND === type ? ActionPageSendLinks : ActionPageReceiveLinks;
     return (
         <ModalLayout modalIcon={button}>
-            <div>
+            <div className='link-wrapper'>
                 {links.map((linkDetail, index) => (
-                    <Link key={'actionLink' + index} to={linkDetail.to + '?type=' + linkDetail.type + '&subType=' + linkDetail.subType + '&user=' + profile.username + '&firstName=' + profile.firstName +'&lastName=' + profile.lastName} >
+                    <Link className='action-link' key={'actionLink' + index} to={linkDetail.to + '?type=' + linkDetail.type + '&subType=' + linkDetail.subType + '&user=' + profile.username + '&firstName=' + profile.firstName +'&lastName=' + profile.lastName} >
                         <ActionPageTitle title={linkDetail.title} icon={linkDetail.icon} /> 
                     </Link>
                 ))}

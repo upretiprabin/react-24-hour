@@ -18,14 +18,14 @@ export const ActionPageSendLinks = [
         subType: ACTION_SUB_TYPE_SEND_NEAR,
         title: SEND_NEAR,
         to: '/action',
-        icon: (<div className='tag'><FontAwesomeIcon className='icon' icon={faArrowUp} /></div>)
+        icon: (<div className='tag action__link-icon'><FontAwesomeIcon className='icon' icon={faArrowUp} /></div>)
     },
     {
         type: ACTION_TYPE_SEND,
         subType: ACTION_SUB_TYPE_SEND_NFT,
         title: SEND_NFT,
         to: '/action',
-        icon: (<div className='tag'><FontAwesomeIcon className='icon' icon={faArrowUp} /></div>)
+        icon: (<div className='tag action__link-icon'><FontAwesomeIcon className='icon' icon={faArrowUp} /></div>)
     }
 ];
 
@@ -35,13 +35,13 @@ export const ActionPageReceiveLinks = [
         subType: ACTION_SUB_TYPE_RECEIVE_NEAR,
         title: RECEIVE_NEAR,
         to: '/action',
-        icon: (<div className='tag'><FontAwesomeIcon className='icon' icon={faArrowDown} /></div>)
+        icon: (<div className='tag action__link-icon'><FontAwesomeIcon className='icon' icon={faArrowDown} /></div>)
     },
     {
         type: ACTION_TYPE_RECEIVE,
         subType: ACTION_SUB_TYPE_RECEIVE_NFT,
         title: RECEIVE_NFT,
         to: '/action',
-        icon: (<div className='tag'><FontAwesomeIcon className='icon' icon={faArrowDown} /></div>)
+        icon: (<div className='tag action__link-icon'><FontAwesomeIcon className='icon' icon={faArrowDown} /></div>)
     }
 ];
