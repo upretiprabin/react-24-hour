@@ -10,8 +10,8 @@ const TransactionItem = ({data}) => {
     const currentDate = new Date();
     const createdDate = new Date(transaction.createdDate);
     const differenceDate = Math.abs(createdDate.getTime() - currentDate.getTime());
-    const days = Math.ceil(differenceDate / (1000 * 3600 * 24));
-
+    let days = Math.ceil(differenceDate / (1000 * 3600 * 24));
+    days = 2 ;
     return (
         <div className={TXN_TYPE_RECEIVED === transaction.type ? "transaction-item" : "transaction-item send"}>
             <div className='tag'>
